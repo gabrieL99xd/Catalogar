@@ -1,0 +1,34 @@
+﻿@model Catalogar.Models.ViewModel.RegisterProductViewModel
+
+<div>
+    <form class="d-flex flex-column align-items-center" method="post" action="@Url.Action("Edit", "Product")">
+        <div class="row col-md-6 mb-4">
+            <div class="">
+                <label for="User" class="form-label">Nome:</label>
+                <input type="text" class="form-control" asp-for="Nome" id="Nome" placeholder="Digite o nome do produto">
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row col-md-6 mb-4">
+            <div class="">
+                <label for="Email" class="form-label">Preço:</label>
+                <input type="number" class="form-control" asp-for="Preco" id="Preco" placeholder="Informe o preço">
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row col-md-6 mb-4">
+            <div class="">
+                <label for="Password" class="form-label">Quantidade:</label>
+                <input type="number" class="form-control" asp-for="Quantidade" id="Quantidade" placeholder="Informe a quantidade">
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center m-4">
+            <input type="submit" class="btn btn-warning p-2" value="EDITAR" />
+        </div>
+    </form>
+</div>

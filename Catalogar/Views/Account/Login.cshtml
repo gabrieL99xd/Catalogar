@@ -1,0 +1,17 @@
+﻿@model Catalogar.Models.ViewModel.LoginViewModel
+
+<div class="min-vh-100 d-flex flex-column justify-content-center">
+    <h2 class="text-dark text-uppercase text-center">Login</h2>
+    <form class="d-flex flex-column align-items-center" method="post" action="@Url.Action("Login", "Account")">
+        <div class="mb-3 col-md-4">
+            <label for="UserLogin" class="form-label">Usuário:</label>
+            <input type="text" class="form-control" id="UserLogin" placeholder="Digite usuário ou e-mail" asp-for="Email">
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="Password" class="form-label">Senha:</label>
+            <input type="password" class="form-control" id="Password" placeholder="Digite a senha" asp-for="Password">
+        </div>
+        <input type="submit" class="btn btn-danger p-2" value="LOGIN"/>
+        <p class="m-2 text-muted text-">Não possui uma conta <a class="link-danger" asp-area="" asp-controller="Account" asp-action="Register">crie uma!</a></p>
+    </form>
+</div>
