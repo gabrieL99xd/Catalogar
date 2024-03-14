@@ -1,5 +1,4 @@
 using Catalogar.Context;
-using Catalogar.Hubs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +33,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.MapHub<CatalogoHub>("/CatalogoHub");
 
 app.Run();
